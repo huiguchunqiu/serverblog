@@ -4,7 +4,6 @@ const bodyParser = require('body-parser')
 const flash = require('connect-flash')
 const config = require('config-lite')(__dirname)
 const routes = require('./routes')
-
 const app = express()
 
 
