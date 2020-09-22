@@ -13,13 +13,13 @@ app.use(bodyParser.urlencoded({ extended: false })) //解析post请求
 
 //session 中间件
 app.use(session({
-    name: config.session.key,
-    secret: config.session.secret,
-    resave: true,
-    saveUninitialized: false,
-    cookie: {
-        maxAge: config.session.maxAge // cookie设置过期时间
-    },
+  name: config.session.key,
+  secret: config.session.secret,
+  resave: true, //是否允许session重置
+  saveUninitialized: false,
+  cookie: {
+    maxAge: config.session.maxAge // cookie设置过期时间
+  },
 }))
 
 // flash 中间件
